@@ -1,0 +1,22 @@
+#Estrutura básica do Gherkin para BDD
+#Produto> Subproduto> Feature/Funcionalidade> User Storie/Estória de usuário> Cenário> Steps(passos)> Exemplos
+
+
+
+@Produto: 
+@Sub Produto:
+@Funcionalidade:
+
+Eu: 
+Quero: 
+Para: 
+
+
+Cenario:
+	Dado que
+	Quando
+	E
+	Então
+	
+Exemplos:
+	

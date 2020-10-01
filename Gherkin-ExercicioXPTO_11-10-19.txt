@@ -1,0 +1,37 @@
+@Produto: Cadastro de clientes
+@Sub Produto:Pessoa Física
+@Funcionalidade:Login XPTO
+
+
+Eu como: Usuário do sistema XPTO
+Quero: Efetuar Login no sistema
+Para: Acessar a tela inicial YZ do sistema de cadastros
+
+
+Cenario:acesso com sucesso
+	Dado que estou na tela de login do sistema XPTO
+	Quando preencho o campo 'Usuário' com <nome>
+	E preencho o campo 'Senha' com <senha>
+	E clico no item 'OK'
+	Então sistema <resposta>
+	
+Exemplos:
+	|nome                      |senha |resposta											     |
+	|válido de primeiro acesso |válida|sistema deverá exibir uma mensagem pop up “Seja bem-vindo ao seu primeiro acesso” com o botão “ok”|
+	|válido	de demais acessos  |válida|Sistema exibe a tela de 'cadastros YZ'							     |
+
+
+Cenario: sem sucesso
+	Dado que estou na tela de login do sistema XPTO
+	Quando preencho o campo 'Usuário' com <nome>
+	E preencho o campo 'Senha' com <senha>
+	E c clico no item 'OK'
+	Então sistema exibe a mensagem <resposta> com a opação 'OK'
+	
+Exemplos:
+	|nome    |senha   |resposta                    |
+	|inválido|válida  |Um ou mais dados incorretos |
+	|válido  |invalida|Um ou mais dados incorretos |
+	|inválido|inválida|Um ou mais dados incorretos |
+	|válido  |inválida|Um ou mais dados incorretos |
+	|válido  |inválida|Acesso bloqueado            |
