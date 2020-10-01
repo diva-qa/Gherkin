@@ -1,1 +1,1 @@
-# Estrutura básica do Gherkin para o BDD.
+Estrutura básica do Gherkin para o BDD.
